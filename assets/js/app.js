@@ -90,8 +90,14 @@ function mostrarCards(data) {
     if (!this.#cache) return [];
     const anio = prompt("Seleciona el año a buscar:");
     if(!anio) return[];
-     return this.#cache.filter( film =>
-        film.release_date === anio);        
+     return this.#cache
+     .filter( film => film.release_date === anio)      
+     .map(film => ({
+        title:film.title,
+        release_date: film.release_date,
+        image: film.image 
+     }))  
+    
     }
    
    titulos_descripcion(){
