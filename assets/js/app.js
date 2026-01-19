@@ -27,7 +27,6 @@ function mostrarCards(data) {
   });
 
 }
-
  class GhibliApi{
     #cache
     constructor (baseUrl = "https://ghibliapi.vercel.app/films") {
@@ -37,7 +36,6 @@ function mostrarCards(data) {
 
      async #getFilms() {
         if (this.#cache) return this.#cache; //contiene el array-obj
-
         const response = await fetch(this.baseUrl);
         if (!response.ok) throw new Error("Error al obtener films");
 
@@ -49,7 +47,6 @@ function mostrarCards(data) {
    
     async mostrarFilms(tipo = "todo") {
         await this.#getFilms();
-
          switch (tipo) {
             case "titulos_directores":
                 return this.titulos_directores();
@@ -66,7 +63,6 @@ function mostrarCards(data) {
    
     }
   }
-
     titulos_directores() {
     if (!this.#cache) return []; //devuelve array vacio para no romper codigo
     return this.#cache.map(film => ({  
@@ -75,7 +71,6 @@ function mostrarCards(data) {
       image: film.image
     }));
   }
-
   //metodo para filtrar  titulos y años
   titulos_anios(){
     if (!this.#cache) return [];
@@ -97,7 +92,6 @@ function mostrarCards(data) {
         release_date: film.release_date,
         image: film.image 
      }))  
-    
     }
    
    titulos_descripcion(){
@@ -114,7 +108,6 @@ function mostrarCards(data) {
         image: film.image,
         id:film.id
     }));
-
    }
 }
 
