@@ -14,7 +14,9 @@ function mostrarCards(data) {
    console.log("Datos de la película:", pelicula);
     cards.innerHTML += `
       <div class="cardBody">
-      <img src="${pelicula.image}" alt="${pelicula.title}">
+        <div class="imgBox">
+          <img src="${pelicula.image}" alt="${pelicula.title}">
+        </div>
         <ul>
           ${pelicula.title ? `<li class="info">Nombre: ${pelicula.title} </li>` : ""}<br>
           ${pelicula.director ? `<li class="info">Director : ${pelicula.director}</li>` : ""}
