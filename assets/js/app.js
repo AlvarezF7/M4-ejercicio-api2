@@ -16,11 +16,11 @@ function mostrarCards(data) {
       <div class="cardBody">
       <img src="${pelicula.image}" alt="${pelicula.title}">
         <ul>
-          ${pelicula.title ? `<li class="info">Nombre: ${pelicula.title}</li>` : ""}
-          ${pelicula.director ? `<li class="info">Director: ${pelicula.director}</li>` : ""}
+          ${pelicula.title ? `<li class="info">Nombre: ${pelicula.title} </li>` : ""}<br>
+          ${pelicula.director ? `<li class="info">Director : ${pelicula.director}</li>` : ""}
           ${pelicula.release_date ? `<li class="info">Año: ${pelicula.release_date}</li>` : ""}
           ${pelicula.description ? `<li class="info">Descripción: ${pelicula.description}</li>` : ""}
-          ${pelicula.id ? `<li class="info">ID: ${pelicula.id}</li>` : ""}
+          ${pelicula.id ? `<li class="info">ID:${pelicula.id}</li>` : ""}
         </ul>
       </div>
     `;

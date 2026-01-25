@@ -1,24 +1,28 @@
 *,
  *::before,
  *::after{
-    box-sizing:border-box;
-    padding: 0.5rem;
+    box-sizing: border-box;
+     margin: 0;
+  padding: 0;
  }
  body{
   background-color: lab(92.12% -27.18 4.4 / 0.671);
+  padding:none;
 }
 
  .container{
-  padding: 1.5rem;
+  position: relative;
+  padding: 3rem;
   align-content: center;
   gap:1rem;
-  color: rgb(65, 128, 211);
+  color: rgb(36, 109, 206);
   font-family: 'Segoe UI', Tahoma, ;
  }
  .banner {
-  width: 100%;
-  height: 550px; /* altura del banner */
+  width: 80%;
+  height: 450px; /* altura del banner */
   overflow: hidden;
+  align-content: center;
 }
 
 .ban{
@@ -47,32 +51,34 @@
   padding: 0.7rem;
   height: 47px;
   font-size: x-large;  
-  background-color: rgba(255, 255, 255, 0.507);
+  color:  rgb(36, 109, 206);
+  background-color: rgba(25, 204, 183, 0.842) ;
   border-width: 1px;
-  border-color: rgb(52, 165, 173);            
+  border-style: solid;
+  border-color: rgb(31, 172, 182);            
   border-radius: 8px;        
   cursor: pointer;
 }
 .btn:hover{
- background-color: rgb(28, 89, 202);
- color:white;
+ background-color: rgba(99, 235, 160, 0.692);
+ color:rgba(10, 23, 199, 0.726);
 }
 .cards{
  display:flex;
  flex-direction: column;
  align-items: center;
-
  gap:1rem;
 }
 .cardBody{
   display: flex;             
   align-items: center;
-  width: 900px;
-  padding: 0.5rem;   
-  gap:0.5rem;
-  color: rgb(17, 14, 20);
+  width: 950px;
+  padding: 1.3rem;   
+  gap:0.6rem;
+  color: rgb(7, 73, 158);
+  font-family:  Tahoma, ;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(12, 6, 70, 0.1);
+  box-shadow: 0 4px 8px rgba(177, 169, 255, 0.1);
   transition: all 0.3s ease;
   background-color: rgba(134, 202, 207, 0.473);
 }
@@ -81,12 +87,40 @@
   height:15rem;
   width: 20rem ;
   object-fit: contain;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
 }
 .info{
   list-style: none;
   text-align: justify;
-  gap: 0.3rem;
+  gap: 0.5rem;
   font-size: 25px;
 }
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* base alineada */
+  gap:0.5rem;
+  font-size:1.5rem;
+  font-style: italic;
+  background-color: rgba(141, 214, 190, 0.842);
+  color:rgb(7, 73, 158) ;
+}
+footer p{
+  margin: 0;
+  transform: translateY(20px);
+}
+#totoro{
+ height:200px;
+ width: auto ;
+ 
+}
 
+#jiji{
+  position: absolute;
+  right: 2rem;
+  top: 88%;
+  transform: translateY(-50%);
+  height: 300px;
+  width: auto;
+ 
+}
